@@ -1,5 +1,82 @@
 [
   {
+    "objectID": "presentation.html#intro",
+    "href": "presentation.html#intro",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Intro",
+    "text": "Intro\n\nDemocratization of climate change (CC) expertise\n\nEveryone is responding to CC in their own ways. Who is doing so explicitly in community with others, and how? What relationships to environment/resources define their community?"
+  },
+  {
+    "objectID": "presentation.html#questions",
+    "href": "presentation.html#questions",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Questions",
+    "text": "Questions\n\nHow does r/Anticonsumption embody the democratization of CC expertise/expertise in responding to CC? How do users position themselves in relation to other people, resources, and environment at large?\n… too much. This became…\nWhat is the anti-consumption movement? What habituated practices and beliefs make r/Anticonsumption a community?\n\nAppropriate to comp methods\nReasonable for my skill set"
+  },
+  {
+    "objectID": "presentation.html#methods",
+    "href": "presentation.html#methods",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Methods",
+    "text": "Methods\n\nSTM\n\nJames Cook (2023), Julia Silge (2018), Dan Card (2023)\n\nRhetorical analysis - ideological constellation mapping\n\nTillery & Bloomfield (2022)"
+  },
+  {
+    "objectID": "presentation.html#topic-modeling",
+    "href": "presentation.html#topic-modeling",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Topic Modeling",
+    "text": "Topic Modeling\n\nr/Anticonsumption thread-starting posts: 971 objects, 7 variables\nCould not get Julia Silge’s multiprocessing to work, so I repeated this:\n{'''{{r}} # model K5 model_K5 &lt;- stm(documents = dfm_stm$documents,                  vocab = dfm_stm$vocab,                  K = 10,                  verbose = TRUE) plot(model_K5) summary(model_K5)"
+  },
+  {
+    "objectID": "presentation.html#topic-modeling-1",
+    "href": "presentation.html#topic-modeling-1",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Topic Modeling",
+    "text": "Topic Modeling\n\n\nTopic 4 Top Words:\n  Highest Prob: t, just, like, buy, things, can, people \n  FREX: don, t, christmas, m, presents, thrifting, gifts \n  Lift: havana, loving, o, toy, #2, @adriftincyberspace, 0-8 \n  Score: t, don, christmas, gifts, halloween, m, havana"
+  },
+  {
+    "objectID": "presentation.html#topic-modeling-2",
+    "href": "presentation.html#topic-modeling-2",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Topic Modeling",
+    "text": "Topic Modeling\n\nLanded on K30"
+  },
+  {
+    "objectID": "presentation.html#topic-modeling-3",
+    "href": "presentation.html#topic-modeling-3",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Topic Modeling",
+    "text": "Topic Modeling\n\nFREX check K30\nTopic 15 Top Words:\n  Highest Prob: right, soil, can, people, now, individual, growth \n  FREX: organisms, soil, cell, biological, imperative, civilisation, super-organism \n  Lift: civilisation, super-organism, acceptable, accessory, adherence, adoption, alll \n  Score: organisms, biological, imperative, soil, reproduce, cell, growth \nTopic 16 Top Words:\n  Highest Prob: use, like, one, things, time, can, feel \n  FREX: states, tiny, shops, skills, common, sorting, whereas \n  Lift: 24th, acrobat, admitted, alteration, answering, barren, baubles \n  Score: whereas, states, tiny, cosy, there’d, default, celebrate"
+  },
+  {
+    "objectID": "presentation.html#rhetorical-analysis---constellating",
+    "href": "presentation.html#rhetorical-analysis---constellating",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Rhetorical Analysis - Constellating",
+    "text": "Rhetorical Analysis - Constellating\n\nAt a glance:\n\n“people” indicates othering attitude, “us vs them”\nhome as site of control: clearing clutter, gardening, childcare, DIY, clothing re/use, food\n\nClose reading of select posts:\n\n“Us vs them”:“so many people,” “other people,” “why do people,” etc.\nGreen-ing personal life/space:“getting rid of,” “refurbishing,” “looking for ideas,” “recipes,” “holistic remedies,” “make [clothing/shoes] last longer”\n“Outside” world (not nature):criticizing corporations, delivery services, megastores, jobs/careers, big brands, corporate traditions, other people in user’s life, etc.\n\na third location where I don’t have to buy anything?”\nindustrialized world inhospitable to anti-consumers"
+  },
+  {
+    "objectID": "presentation.html#proof-of-concept",
+    "href": "presentation.html#proof-of-concept",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Proof of Concept?",
+    "text": "Proof of Concept?\n\nMy conclusion: r/Anticonsumption users often position themselves in direct moral opposition to the industrialized world around them. They often seek/share advice about altering home space, home practices, and daily habits toward overall decreased consumption of goods.\nSubreddit bio: “/r/Anticonsumption is a sub primarily for criticizing and discussing consumer culture. This includes but is not limited to material consumption, the environment, media consumption, and corporate influence.”\nAn interested and pliable “yes” + at least two grains of salt"
+  },
+  {
+    "objectID": "presentation.html#additional-uptakes",
+    "href": "presentation.html#additional-uptakes",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Additional Uptakes",
+    "text": "Additional Uptakes\n\nPower of asking the right question\nCommunity\nMy bigger picture: this offers signposts, practice, clarification"
+  },
+  {
+    "objectID": "presentation.html#questions-1",
+    "href": "presentation.html#questions-1",
+    "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
+    "section": "Questions?",
+    "text": "Questions?"
+  },
+  {
     "objectID": "experience report.html",
     "href": "experience report.html",
     "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
@@ -46,7 +123,7 @@
     "href": "experience report.html#phase-1b-preparing-data---dan-card-2023",
     "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
     "section": "Phase 1b: Preparing Data - Dan Card (2023)",
-    "text": "Phase 1b: Preparing Data - Dan Card (2023)\n```{r}\n\n# create and read in CSV\nlibrary(dplyr)\n\nwrite.csv(ac_threads, \"data/ac_threads.csv\")\n\nread.csv(\"data/ac_threads.csv\")\n\n\n\n# clean data \nlibrary(janitor)\nlibrary(tidyverse)\n\nac_threads &lt;- clean_names(ac_threads)\n\nglimpse(ac_threads)\n\nac_threads &lt;- ac_threads %&gt;% \n  select(title,\n         text,\n         comments)\n\nglimpse(ac_threads)\n\n\n# create corpus\nlibrary(quanteda)\nlibrary(quanteda.dictionaries)\nlibrary(quanteda.textmodels)\nlibrary(quanteda.textplots)\nlibrary(quanteda.textstats)\nlibrary(readtext)\nlibrary(spacyr)\nlibrary(tidyverse)\n\nthread_corp &lt;- corpus(ac_threads, text_field = \"text\")\n\n\n# tokenize the corpus\nthread_tokens &lt;- tokens(thread_corp, remove_punct = TRUE, remove_separators = TRUE, remove_numbers = TRUE)\n\nthread_tokens\n\n\n# remove stop words\nhead(stopwords(\"en\"), 50)\n\nthread_tokens_nostop &lt;- thread_tokens %&gt;% tokens_remove(stopwords(\"en\"))\n\ntidy_threads_dfm &lt;- dfm(thread_tokens_nostop)\n\n```\n\nPhase 1b Inputs, Outputs, and Errors\nText"
+    "text": "Phase 1b: Preparing Data - Dan Card (2023)\n```{r}\n\n# create and read in CSV\nlibrary(dplyr)\n\nwrite.csv(ac_threads, \"data/ac_threads.csv\")\n\nread.csv(\"data/ac_threads.csv\")\n\n\n\n# clean data \nlibrary(janitor)\nlibrary(tidyverse)\n\nac_threads &lt;- clean_names(ac_threads)\n\nglimpse(ac_threads)\n\nac_threads &lt;- ac_threads %&gt;% \n  select(title,\n         text,\n         comments)\n\nglimpse(ac_threads)\n\n\n# create corpus\nlibrary(quanteda)\nlibrary(quanteda.dictionaries)\nlibrary(quanteda.textmodels)\nlibrary(quanteda.textplots)\nlibrary(quanteda.textstats)\nlibrary(readtext)\nlibrary(spacyr)\nlibrary(tidyverse)\n\nthread_corp &lt;- corpus(ac_threads, text_field = \"text\")\n\n\n# tokenize the corpus\nthread_tokens &lt;- tokens(thread_corp, remove_punct = TRUE, remove_separators = TRUE, remove_numbers = TRUE)\n\nthread_tokens\n\n\n# remove stop words\nhead(stopwords(\"en\"), 50)\n\nthread_tokens_nostop &lt;- thread_tokens %&gt;% tokens_remove(stopwords(\"en\"))\n\ntidy_threads_dfm &lt;- dfm(thread_tokens_nostop)\n\n```\n\nPhase 1b Inputs, Outputs, and Errors\nPhase 1b went smoothly as well. The only errors that arose were from uncalled libraries or a missing package."
   },
   {
     "objectID": "experience report.html#phase-2-testing-and-training-models-to-find-kn---dan-card-2023",
@@ -89,20 +166,6 @@
     "title": "Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption",
     "section": "References",
     "text": "References\nCard, D. (2023). week07 [Github repository]. Github. https://github.com/danieljcard1/demo_docs/tree/main/demos/week07 \nCard, D. (2023) week10 [Github repository]. Github. https://github.com/danieljcard1/demo_docs/tree/main/demos/week10 \nJames Cook. (2023, April 17). Extracting reddit data with R and the package RedditExtractoR (2023 update) [Video]. YouTube, https://www.youtube.com/watch?v=Snm0Azfi_hc \nLee, M. SW. (2022). Anti-consumption research: A foundational and contemporary overview. Current Opinion in Psychology, 45, https://doi.org/10.1016/j.copsyc.2022.101319 \nMakri, K., Schlegelmilch, B. B., Mai, R., & Dinhof, K. (2020). What we know about anticonsumption: An attempt to nail jelly to the wall. Psychology & Marketing, 37(2), 167-354. https://doi.org/10.1002/mar.21319 \nSilge, J. (2018, January 25). The game is afoot! Topic modeling of sherlock holmes stories. Julia Silge. https://juliasilge.com/blog/sherlock-holmes-stm/ \nSilge, J. (2018, September 8). Training, evaluating, and interpreting topic models. Julia Silge. https://juliasilge.com/blog/evaluating-stm/ \nTillery, D. & Bloomfield, E. F. (2022). Hyperrationality and rhetorical constellations in digital climate change denial: A multi-methodological analysis of the discourse of watts up with that. Technical Communication Quarterly, 13(4), 356-373. https://doi.org/10.1080/10572252.2021.2019317"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "WRIT 8520 Final Project",
-    "section": "",
-    "text": "Text"
-  },
-  {
-    "objectID": "index.html#triangulating-resource-conservation-movements-in-digital-spaces-topic-modeling-and-rhetorical-constellations-on-ranticonsumption",
-    "href": "index.html#triangulating-resource-conservation-movements-in-digital-spaces-topic-modeling-and-rhetorical-constellations-on-ranticonsumption",
-    "title": "WRIT 8520 Final Project",
-    "section": "",
-    "text": "Text"
   },
   {
     "objectID": "about.html",
