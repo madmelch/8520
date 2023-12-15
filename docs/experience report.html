@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>WRIT 8520 Final Project - Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">WRIT 8520 Final Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./presentation.html" rel="" target="">
+ <span class="menu-text">presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./experience report.html" rel="" target="" aria-current="page">
+ <span class="menu-text">experience report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">about me</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#my-code" id="toc-my-code" class="nav-link" data-scroll-target="#my-code">My Code</a></li>
+  <li><a href="#phase-1a-scraping-ranticonsumption---james-cook-2023" id="toc-phase-1a-scraping-ranticonsumption---james-cook-2023" class="nav-link" data-scroll-target="#phase-1a-scraping-ranticonsumption---james-cook-2023">Phase 1a: Scraping r/Anticonsumption - James Cook (2023)</a>
+  <ul class="collapse">
+  <li><a href="#phase-1a-inputs-outputs-and-errors" id="toc-phase-1a-inputs-outputs-and-errors" class="nav-link" data-scroll-target="#phase-1a-inputs-outputs-and-errors">Phase 1a Inputs, Outputs, and Errors</a></li>
+  </ul></li>
+  <li><a href="#phase-1b-preparing-data---dan-card-2023" id="toc-phase-1b-preparing-data---dan-card-2023" class="nav-link" data-scroll-target="#phase-1b-preparing-data---dan-card-2023">Phase 1b: Preparing Data - Dan Card (2023)</a>
+  <ul class="collapse">
+  <li><a href="#phase-1b-inputs-outputs-and-errors" id="toc-phase-1b-inputs-outputs-and-errors" class="nav-link" data-scroll-target="#phase-1b-inputs-outputs-and-errors">Phase 1b Inputs, Outputs, and Errors</a></li>
+  </ul></li>
+  <li><a href="#phase-2-testing-and-training-models-to-find-kn---dan-card-2023" id="toc-phase-2-testing-and-training-models-to-find-kn---dan-card-2023" class="nav-link" data-scroll-target="#phase-2-testing-and-training-models-to-find-kn---dan-card-2023">Phase 2: Testing and Training Models to Find Kn - Dan Card (2023)</a></li>
+  <li><a href="#phase-3-modeling-k20-and-k30-to-determine-final-kn--julia-silge-2018" id="toc-phase-3-modeling-k20-and-k30-to-determine-final-kn--julia-silge-2018" class="nav-link" data-scroll-target="#phase-3-modeling-k20-and-k30-to-determine-final-kn--julia-silge-2018">Phase 3: Modeling K20 and K30 to Determine Final Kn- Julia Silge (2018)</a></li>
+  <li><a href="#phase-4-rhetorical-constellating-on-k30---tillery-bloomfield-2022" id="toc-phase-4-rhetorical-constellating-on-k30---tillery-bloomfield-2022" class="nav-link" data-scroll-target="#phase-4-rhetorical-constellating-on-k30---tillery-bloomfield-2022">Phase 4: Rhetorical Constellating on K30 - Tillery &amp; Bloomfield (2022)</a>
+  <ul class="collapse">
+  <li><a href="#phase-4-inputs" id="toc-phase-4-inputs" class="nav-link" data-scroll-target="#phase-4-inputs">Phase 4 Inputs</a></li>
+  <li><a href="#phase-4-outputs" id="toc-phase-4-outputs" class="nav-link" data-scroll-target="#phase-4-outputs">Phase 4 Outputs</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a>
+  <ul class="collapse">
+  <li><a href="#coding-choices" id="toc-coding-choices" class="nav-link" data-scroll-target="#coding-choices">Coding Choices</a></li>
+  <li><a href="#my-research" id="toc-my-research" class="nav-link" data-scroll-target="#my-research">My Research</a></li>
+  <li><a href="#personal-impact" id="toc-personal-impact" class="nav-link" data-scroll-target="#personal-impact">Personal Impact</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Triangulating Resource Conservation Movements in Digital Spaces: Topic Modeling and Rhetorical Constellations on r/Anticonsumption</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>In this project, I created a structured topic model (STM) of posts on r/Anticonsumption that revealed common threads of discussion, then performed rhetorical constellation analysis on and between the 30 topics. My goal was to define this movement based on its shared language practices. I found that r/Anticonsumption represents a community focused on diminishing consumerist tendencies, financial conservativism, and a feeling-based relationship to their external and internal environments.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>What are users of the r/Anticonsumption space talking about? I want to learn about this community’s motivations, goals, joys, and anxieties, as well as in what climate contexts they see themselves situated (e.g., anthropocene, eremocene, state-guided versus corporate capitalism, neoliberalism, technological takeover). An additional component of this inquiry is defining the anticonsumption movement in general. The movement is relatively new and lacks a reliable definition (Lee 2022; Makri et al.&nbsp;2020). STM and rhetorical constellation analysis can lend insight into the anticonsumption movement by better defining its character and goals, as well as addressing my question of how the community is situated in climate change discourse.</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>I performed STM on threads posted to r/Anticonsumption within the past month. This yielded 971 items with 7 variables. To first scrape the necessary data from r/Anticonsumption and prepare the data for exploration, I used a YouTube tutorial from James Cook (2023).</p>
+<p>After scraping, I tested and trained topic models using a variety of K values ranging from K = 5 (K5) to K = 70 (K70). This included producing summaries of each topic in K = n (Kn) including the terms with highest probability to appear in posts within a given topic (“Highest Prob”) and the terms most frequent and exclusive to each topic (FREX). Code for this part of the process was provided by Dan Card (2023). The Kn with greatest commonality between topics’ Highest Prob and FREX terms was K30. Therefore, I elected to perform close reading and qualitative analysis on K30 topics. For this, I used code provided by Dan Card (2023) and Julia Silge (2018).</p>
+<p>Finally, my manual qualitative analysis was inspired by the rhetorical constellation method demonstrated by Tillery and Bloomfield (2022). Their definition of “prominences” within a given discourse as nodes of conversation that create a “constellation” inspired my coding practice for the close reading portion of my analysis. Tillery and Bloomfield also aim to discern the political ideologies underlying subsets of their data, and position various comments and therefore prominences somewhere on a “left” to “right” political spectrum. Since my aim was to definitionally describe r/Anticonsumption discourse, I did not pursue this ideologizing effort.</p>
+</section>
+<section id="my-code" class="level2">
+<h2 class="anchored" data-anchor-id="my-code">My Code</h2>
+</section>
+<section id="phase-1a-scraping-ranticonsumption---james-cook-2023" class="level2">
+<h2 class="anchored" data-anchor-id="phase-1a-scraping-ranticonsumption---james-cook-2023">Phase 1a: Scraping r/Anticonsumption - James Cook (2023)</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># get data</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"RedditExtractoR"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"kableExtra"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RedditExtractoR)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># scrape r/Anticonsumption for threads</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ac_threads <span class="ot">&lt;-</span> <span class="fu">find_thread_urls</span>(<span class="at">subreddit =</span> <span class="st">"Anticonsumption"</span>, <span class="at">sort_by =</span> <span class="st">"new"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ac_threads, <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="phase-1a-inputs-outputs-and-errors" class="level3">
+<h3 class="anchored" data-anchor-id="phase-1a-inputs-outputs-and-errors">Phase 1a Inputs, Outputs, and Errors</h3>
+<p>Phase 1a was the quickest and smoothest step in this research. I ran into no errors or sticking points with the code, and it worked just as well upon rerun. I gathered all thread-starting posts (sans comments) from the past month which included 971 objects of 7 variables, which looks about right.</p>
+</section>
+</section>
+<section id="phase-1b-preparing-data---dan-card-2023" class="level2">
+<h2 class="anchored" data-anchor-id="phase-1b-preparing-data---dan-card-2023">Phase 1b: Preparing Data - Dan Card (2023)</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create and read in CSV</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(ac_threads, <span class="st">"data/ac_threads.csv"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">"data/ac_threads.csv"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># clean data </span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>ac_threads <span class="ot">&lt;-</span> <span class="fu">clean_names</span>(ac_threads)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(ac_threads)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ac_threads <span class="ot">&lt;-</span> ac_threads <span class="sc">%&gt;%</span> </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(title,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>         text,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>         comments)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(ac_threads)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># create corpus</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.dictionaries)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textmodels)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textstats)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readtext)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spacyr)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>thread_corp <span class="ot">&lt;-</span> <span class="fu">corpus</span>(ac_threads, <span class="at">text_field =</span> <span class="st">"text"</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># tokenize the corpus</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>thread_tokens <span class="ot">&lt;-</span> <span class="fu">tokens</span>(thread_corp, <span class="at">remove_punct =</span> <span class="cn">TRUE</span>, <span class="at">remove_separators =</span> <span class="cn">TRUE</span>, <span class="at">remove_numbers =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>thread_tokens</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="co"># remove stop words</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">stopwords</span>(<span class="st">"en"</span>), <span class="dv">50</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>thread_tokens_nostop <span class="ot">&lt;-</span> thread_tokens <span class="sc">%&gt;%</span> <span class="fu">tokens_remove</span>(<span class="fu">stopwords</span>(<span class="st">"en"</span>))</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>tidy_threads_dfm <span class="ot">&lt;-</span> <span class="fu">dfm</span>(thread_tokens_nostop)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="phase-1b-inputs-outputs-and-errors" class="level3">
+<h3 class="anchored" data-anchor-id="phase-1b-inputs-outputs-and-errors">Phase 1b Inputs, Outputs, and Errors</h3>
+<p>Text</p>
+</section>
+</section>
+<section id="phase-2-testing-and-training-models-to-find-kn---dan-card-2023" class="level2">
+<h2 class="anchored" data-anchor-id="phase-2-testing-and-training-models-to-find-kn---dan-card-2023">Phase 2: Testing and Training Models to Find Kn - Dan Card (2023)</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stm)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># convert dfm to stm - Dan Card (2023)</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stm)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>dfm_stm <span class="ot">&lt;-</span> <span class="fu">convert</span>(tidy_threads_dfm, <span class="at">to =</span> <span class="st">"stm"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># model K5</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>model_K5 <span class="ot">&lt;-</span> <span class="fu">stm</span>(<span class="at">documents =</span> dfm_stm<span class="sc">$</span>documents,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>             <span class="at">vocab =</span> dfm_stm<span class="sc">$</span>vocab, </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>             <span class="at">K =</span> <span class="dv">10</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>             <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_K5)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_K5)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># repeat for K10</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>model_K10 <span class="ot">&lt;-</span> <span class="fu">stm</span>(<span class="at">documents =</span> dfm_stm<span class="sc">$</span>documents,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                <span class="at">vocab =</span> dfm_stm<span class="sc">$</span>vocab, </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>                <span class="at">K =</span> <span class="dv">10</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>                <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_K10)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_K10)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># K20</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>model_K20 <span class="ot">&lt;-</span> <span class="fu">stm</span>(<span class="at">documents =</span> dfm_stm<span class="sc">$</span>documents,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>                 <span class="at">vocab =</span> dfm_stm<span class="sc">$</span>vocab, </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>                 <span class="at">K =</span> <span class="dv">20</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_K20)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_K20)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="co"># K30</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>model_K30 <span class="ot">&lt;-</span> <span class="fu">stm</span>(<span class="at">documents =</span> dfm_stm<span class="sc">$</span>documents,</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>                 <span class="at">vocab =</span> dfm_stm<span class="sc">$</span>vocab, </span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>                 <span class="at">K =</span> <span class="dv">30</span>,</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_K30)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_K30)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="co"># K40</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>model_K40 <span class="ot">&lt;-</span> <span class="fu">stm</span>(<span class="at">documents =</span> dfm_stm<span class="sc">$</span>documents,</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>                 <span class="at">vocab =</span> dfm_stm<span class="sc">$</span>vocab, </span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>                 <span class="at">K =</span> <span class="dv">40</span>,</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_K40)</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_K40)</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co"># K50</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>model_K50 <span class="ot">&lt;-</span> <span class="fu">stm</span>(<span class="at">documents =</span> dfm_stm<span class="sc">$</span>documents,</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>                 <span class="at">vocab =</span> dfm_stm<span class="sc">$</span>vocab, </span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>                 <span class="at">K =</span> <span class="dv">50</span>,</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model_K50)</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_K50)</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="phase-2-inputs-outputs-and-errors" class="level4">
+<h4 class="anchored" data-anchor-id="phase-2-inputs-outputs-and-errors">Phase 2 Inputs, Outputs, and Errors</h4>
+<p>I ran into a problem with running parallel tests for ideal K-values, i.e., Julia Silge’s code for model diagnostics by number of topics. I was unable to produce visuals showing held-out likelihood, lower bound, residuals, and semantic coherence for multiple K-values. To move forward, I simply re-ran a chunk of functional, well-understood code for each K-value I wished to explore as shown above.</p>
+<p>The plot and summary functions following each iteration yielded <a href="https://docs.google.com/document/d/1SWBxubywxuimRJBdfBnJB1l-cMQehIuXCl6uN5RyYUw/edit?usp=sharing">visuals shown here</a> (externally linked doc). Based on the commonalities between Highest Prob terms and FREX terms as well as researcher-observed semantic coherence of topics between all explored Kn, I elected to further explore K20 and K30.</p>
+</section>
+</section>
+<section id="phase-3-modeling-k20-and-k30-to-determine-final-kn--julia-silge-2018" class="level2">
+<h2 class="anchored" data-anchor-id="phase-3-modeling-k20-and-k30-to-determine-final-kn--julia-silge-2018">Phase 3: Modeling K20 and K30 to Determine Final Kn- Julia Silge (2018)</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># exploring topics approaching ideal Kn</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># beta: highest word probabilities for each topic</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># K20</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>k20_beta <span class="ot">&lt;-</span> <span class="fu">tidy</span>(model_K20)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>k20_beta <span class="sc">%&gt;%</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">10</span>, beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">paste0</span>(<span class="st">"Topic "</span>, topic),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">term =</span> <span class="fu">reorder_within</span>(term, beta, topic)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(term, beta, <span class="at">fill =</span> <span class="fu">as.factor</span>(topic))) <span class="sc">+</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> topic, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_reordered</span>() <span class="sc">+</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(beta),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Highest word probabilities for each topic"</span>,</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">" "</span>)  </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># K30</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>k30_beta <span class="ot">&lt;-</span> <span class="fu">tidy</span>(model_K30)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>k30_beta <span class="sc">%&gt;%</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">10</span>, beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">paste0</span>(<span class="st">"Topic "</span>, topic),</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>         <span class="at">term =</span> <span class="fu">reorder_within</span>(term, beta, topic)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(term, beta, <span class="at">fill =</span> <span class="fu">as.factor</span>(topic))) <span class="sc">+</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> topic, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_reordered</span>() <span class="sc">+</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(beta),</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Highest word probabilities for each topic"</span>,</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">" "</span>)  </span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="co"># gamma: probabilities that each doc is generated from each topic</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="co"># K20</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>k20_gamma <span class="ot">&lt;-</span> <span class="fu">tidy</span>(model_K20, <span class="at">matrix =</span> <span class="st">"gamma"</span>,</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>                  <span class="at">document_names =</span> <span class="fu">rownames</span>(tidy_threads_dfm))</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="co"># K30</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>k30_gamma <span class="ot">&lt;-</span> <span class="fu">tidy</span>(model_K30, <span class="at">matrix =</span> <span class="st">"gamma"</span>,</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>                  <span class="at">document_names =</span> <span class="fu">rownames</span>(tidy_threads_dfm))</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="co"># visual for k20</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"scales"</span>)</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>top_terms_k20 <span class="ot">&lt;-</span> k20_beta <span class="sc">%&gt;%</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">7</span>, beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(topic, term) <span class="sc">%&gt;%</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">terms =</span> <span class="fu">list</span>(term)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">terms =</span> <span class="fu">map</span>(terms, paste, <span class="at">collapse =</span> <span class="st">", "</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(terms))</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>gamma_terms_k20 <span class="ot">&lt;-</span> k20_gamma <span class="sc">%&gt;%</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">gamma =</span> <span class="fu">mean</span>(gamma)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(gamma)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(top_terms, <span class="at">by =</span> <span class="st">"topic"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">paste0</span>(<span class="st">"Topic "</span>, topic),</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>         <span class="at">topic =</span> <span class="fu">reorder</span>(topic, gamma))</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>gamma_terms_k20 <span class="sc">%&gt;%</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">20</span>, gamma) <span class="sc">%&gt;%</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(topic, gamma, <span class="at">label =</span> terms, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">nudge_y =</span> <span class="fl">0.0005</span>, <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>            <span class="at">family =</span> <span class="st">"IBMPlexSans"</span>) <span class="sc">+</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>                     <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.09</span>),</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_tufte</span>(<span class="at">base_family =</span> <span class="st">"IBMPlexSans"</span>, <span class="at">ticks =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>,</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">family=</span><span class="st">"IBMPlexSans-Bold"</span>),</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">13</span>)) <span class="sc">+</span></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(gamma),</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Top 20 topics by prevalence in r/Anticonsumption"</span>,</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">" "</span>)</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="co"># visual for k30</span></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>top_terms_l30 <span class="ot">&lt;-</span> k30_beta <span class="sc">%&gt;%</span></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">7</span>, beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>beta) <span class="sc">%&gt;%</span></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(topic, term) <span class="sc">%&gt;%</span></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">terms =</span> <span class="fu">list</span>(term)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">terms =</span> <span class="fu">map</span>(terms, paste, <span class="at">collapse =</span> <span class="st">", "</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(terms))</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>gamma_terms_k30 <span class="ot">&lt;-</span> k30_gamma <span class="sc">%&gt;%</span></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">gamma =</span> <span class="fu">mean</span>(gamma)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(gamma)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(top_terms, <span class="at">by =</span> <span class="st">"topic"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">paste0</span>(<span class="st">"Topic "</span>, topic),</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>         <span class="at">topic =</span> <span class="fu">reorder</span>(topic, gamma))</span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>gamma_terms_k30 <span class="sc">%&gt;%</span></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">30</span>, gamma) <span class="sc">%&gt;%</span></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(topic, gamma, <span class="at">label =</span> terms, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">nudge_y =</span> <span class="fl">0.0005</span>, <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>            <span class="at">family =</span> <span class="st">"IBMPlexSans"</span>) <span class="sc">+</span></span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>                     <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.09</span>),</span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_tufte</span>(<span class="at">base_family =</span> <span class="st">"IBMPlexSans"</span>, <span class="at">ticks =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>,</span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">family=</span><span class="st">"IBMPlexSans-Bold"</span>),</span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">13</span>)) <span class="sc">+</span></span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(gamma),</span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Top 30 topics by prevalence in r/Anticonsumption"</span>,</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">" "</span>)</span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="phase-3-inputs-outputs-and-errors" class="level4">
+<h4 class="anchored" data-anchor-id="phase-3-inputs-outputs-and-errors">Phase 3 Inputs, Outputs, and Errors</h4>
+<p>These plots list more top terms per topic than the previous ones and offer clearer visualization of the topic proportions. As I compared K20 and K30 using these visuals, it became clear that K30 offered greater semantic coherence within each topic as well as across groups of topics which featured overlapping top words. A key signifier of coherence was my personal response of follow-up question asking when observing K30 topics versus definitional confusion while looking through K20 topics.</p>
+<p>After this phase, I proceeded to analyze topics under K30 using manual qualitative methods.</p>
+<p><img src="images/K20.png" class="img-fluid"></p>
+<p><img src="images/K30.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="phase-4-rhetorical-constellating-on-k30---tillery-bloomfield-2022" class="level2">
+<h2 class="anchored" data-anchor-id="phase-4-rhetorical-constellating-on-k30---tillery-bloomfield-2022">Phase 4: Rhetorical Constellating on K30 - Tillery &amp; Bloomfield (2022)</h2>
+<section id="phase-4-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="phase-4-inputs">Phase 4 Inputs</h3>
+<p><strong>Identifying Nodes, or “Prominences”</strong></p>
+<p>My first step in engaging with STM results on a deeper level was identifying what type of phenomenon to look for. Reviewing Tillery and Bloomfield’s methods clarified that the point of their analyses were discerning “prominence”: “discursive frequency, but, in another way, prominence can be understood as the driving force and logics undergirding discursive formations and patterns.” (p.&nbsp;357). Using this definition I searched my CSV file for individual terms which frequently appeared as both Highest Prob and FREX terms in K30 topics. I performed a close read of the surrounding text lines and noted the common language practices, themes of contemplation or questioning, threads of concern, and common objects, people, and relationship mentioned in those surrounding lines of text.</p>
+<p><strong>Creating a Constellation</strong></p>
+<p>Finding connections between different prominences required (1) identifying terms with the most authority in each prominence; (2) defining those authoritative terms based on their textual context; and (3) forming a “prominence identity” which addressed the contextualized meaning of each collection of authoritative terms. Mapping these rhetorical constellations required background knowledge on contemporary concerns related to climate change response, and was significantly informed by my knowledge of resource conservation movements related to anti-consumption such as anti-consumerism, minimalism, self-sustainability, simple living, slow living, slow food, and anti-capitalism.</p>
+</section>
+<section id="phase-4-outputs" class="level3">
+<h3 class="anchored" data-anchor-id="phase-4-outputs">Phase 4 Outputs</h3>
+<section id="the-prominences" class="level4">
+<h4 class="anchored" data-anchor-id="the-prominences">The Prominences</h4>
+<p><strong>Us versus them.</strong> Signaled by topic term “people.” I also searched my CSV for “everyone,” “family,” “friends,” “coworkers,” “parents,” “folks,” and “folx.”</p>
+<p>The posts including these terms identified a group of people ranging from broad (“people”) to specific (“parents at my kids’ school”), and described a relationship between said group and the individual user. Most often, users were expressing frustration, exasperation, and confusion about others’ actions and how the user should respond to them. In some instances, the relationships were remarkably complex and large scale. One user expresses frustration at “progressive people” who accept the notion that “nobody is allowed to question the desirability of growth,” and they solicit opinions on this “fundamental growth imperative” central to consumerist culture. In other instances, the relationships are simple yet highly impactful, such as the tension (animosity, even) between folx who use rechargeable vape pens with cartridges versus single-use self-contained apparatuses.</p>
+<p><strong>Home as site of choice making.</strong> Signaled by topic terms indicating home and personal-domain-related nouns or verbs, such as “house,” “garden,” “clothes,” and “gifts.”</p>
+<p>Posts which included these terms were most often descriptions of habit-changing and seeking advice on how to alter one’s consumption practices in and around the home, and complaints about others’ use of disposable goods in their everyday life. Users asked for advice on greening their yards and gardens, making their home more energy efficient, reducing food waste, refurbishing different areas of the home, and making personal products last longer.</p>
+<p><strong>Childcare.</strong> Signaled by topic term “kids.” I also searched for “child-.”</p>
+<p>This prominence initially began as part of “Home as site of choice making,” but after seeing how extensively users covered this topic, became one of its own. Posts concerning childcare were often lengthy, and described a variety of concerns about others’ children and the user’s own. Many users expressed fear that kids have no control over learning patterns of overconsumption, and a sense of helplessness when it came to imagining the environments (physical and social) their kids would inherit and co-create. Some posts also involved discussion of how to teach one’s kids the meaning of sustainability and how to demonstrate it as a parent. Many posts included notes on clothing repair, cooking meals, reusing holiday and birthday decorations, alternative transportation (e.g., biking or walking), using cloth napkins, planting rain gardens, and involving kids in taking care of the home.</p>
+<p><strong>Conservation and avoidance of particular materials.</strong> Signaled by topic terms “plastic,” “gas,” “paper,” “soil,” and “food.”</p>
+<p>Posts mentioning a specific resource almost always focused entirely on the user reducing their consumption of that material whether in effort to conserve it (as in the case of “food,” e.g.) or not contribute to its production (as with “plastic,” e.g.). Where “food” is mentioned, users describe ways to track household consumption and waste, consuming less meat toward water conservation, feeding pets, and buying food items wrapped up in less plastic. On that note, where “plastic” is mentioned, the surrounding text is directly related to eliminating the user’s dependency on plastic. Users note thrifting cloth tote bags, reusing Halloween decorations, finding replacements for Ziplock bags, buying plastic-free makeup, or convincing their barista to use their travel mug instead of a disposable coffee cup.</p>
+<p><strong>The industrial antagonist.</strong> Signaled by topic terms describing dominating cultural structures such as “companies,” “consumption,” “economics,” “christmas,” and “expensive.” I also searched for “holiday,” “tech,” and “politic-.”</p>
+<p>Overall, posts including these terms were criticizing corporate culture, choices make by corporations and governments, the allure of delivery services, online megastores, big brands, and traditions such as holidays. Many users describe feeling inundated with pressure to overtly celebrate holidays with material goods, pressure to use Amazon Prime, to keep their digital devices up to date, and to place anticonsumption at the forefront of their political identity.</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Overall, r/Anticonsumption is a community whose constituents position themselves in opposition to the industrialized world around them, often with undertones of moral discord. Within the community, they often seek and share advice about altering home space, home practices, and daily habits toward a generally decreased consumption of goods. The partial constellation I was able to produce from the data yielded five prominences or nodes. Each prominence represents a collection of commonplace understandings and beliefs about one’s relationship to Others, including one’s material surroundings and resources as well as the immaterial yet perceivable environment including politics and emotions.</p>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<section id="coding-choices" class="level3">
+<h3 class="anchored" data-anchor-id="coding-choices">Coding Choices</h3>
+<p>If I could do this project again on r/Anticonsumption, I would prefer to perform STM using not only single words, but also concordance and collocates in order to add detail and most likely accuracy to the topics yielded. I would also like to explore user posts that are explicitly linked to a certain topic(s) in order to better analyze them for meaning. Another way to rigorize my findings would be to explore the content of complete comment data per thread. There is rich conversation here, and a lot of it. On this or a different set of texts in a separate project, I also want to try using the stminsights ShinyApp for more variable, nuanced, and dynamic visualizations (of topics <em>and</em> an actual representation of a rhetorical “constellation”).</p>
+</section>
+<section id="my-research" class="level3">
+<h3 class="anchored" data-anchor-id="my-research">My Research</h3>
+<p>In the broader context of my personal research interests, this project (1) offers signposts to subjects, methods, and scholars who are interesting to me; (2) has served as a practical foundation for STM and rhetorical constellating from which to build my methodological skills; (3) and acts as a small square of landscape in the gargantuan ecology of climate change discourse communities who coalesce in digital spaces.</p>
+</section>
+<section id="personal-impact" class="level3">
+<h3 class="anchored" data-anchor-id="personal-impact">Personal Impact</h3>
+<p>On a more personal note, this project meant a lot to me. I have never coded before in my life, and found it extremely challenging to pivot my problem-solving inclinations from “re/craft a path to arrive at a better conclusion, and leave annotations to edit later” to “find the specific error now and seek a workable solution that fits the code I have already run thus far.” This was excruciating and rewarding in equal parts, not in the least because I have gleaned a more proactive and act-now attitude when encountering troubles in other forms of project and research. I have also developed a durability when it comes to encountering “Error”s and “Warning”s—I no longer fear them, and even have a small toolkit of my own that can help me seek solutions.</p>
+<p>Ultimately, completing this work and sharing it with my peers while also hearing about their own coding efforts and insights had a remarkable effect on my self-assuredness and centeredness. As a <em>first-semester-EVER</em> graduate student, I often feel insecure about being surrounded by PhD students and post-docs. I tend to avoid speaking up unless in a small group, despite wanting to be involved and having things I want to say. This course was glaringly different than other TC and Rhetoric courses I have taken, and I struggled each week to parse our course texts and make progress with RStudio. Yet, our classroom was a safe space for me to begin dissolving these barriers, and this project was a much appreciated no-excuses (!!) opportunity to step up and demonstrate what I have learned and what I have not.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/firendship power gif.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Card, D. (2023). week07 [Github repository]. Github. <a href="https://github.com/danieljcard1/demo_docs/tree/main/demos/week07" class="uri">https://github.com/danieljcard1/demo_docs/tree/main/demos/week07</a>&nbsp;</p>
+<p>Card, D. (2023) week10 [Github repository]. Github. <a href="https://github.com/danieljcard1/demo_docs/tree/main/demos/week10" class="uri">https://github.com/danieljcard1/demo_docs/tree/main/demos/week10</a>&nbsp;</p>
+<p>James Cook. (2023, April 17). Extracting reddit data with R and the package RedditExtractoR (2023 update) [Video]. YouTube, <a href="https://www.youtube.com/watch?v=Snm0Azfi_hc" class="uri">https://www.youtube.com/watch?v=Snm0Azfi_hc</a>&nbsp;</p>
+<p>Lee, M. SW. (2022). Anti-consumption research: A foundational and contemporary overview. Current Opinion in Psychology, 45, <a href="https://doi.org/10.1016/j.copsyc.2022.101319" class="uri">https://doi.org/10.1016/j.copsyc.2022.101319</a>&nbsp;</p>
+<p>Makri, K., Schlegelmilch, B. B., Mai, R., &amp; Dinhof, K. (2020). What we know about anticonsumption: An attempt to nail jelly to the wall. Psychology &amp; Marketing, 37(2), 167-354. <a href="https://doi.org/10.1002/mar.21319" class="uri">https://doi.org/10.1002/mar.21319</a>&nbsp;</p>
+<p>Silge, J. (2018, January 25). The game is afoot! Topic modeling of sherlock holmes stories. Julia Silge. <a href="https://juliasilge.com/blog/sherlock-holmes-stm/" class="uri">https://juliasilge.com/blog/sherlock-holmes-stm/</a>&nbsp;</p>
+<p>Silge, J. (2018, September 8). Training, evaluating, and interpreting topic models. Julia Silge. <a href="https://juliasilge.com/blog/evaluating-stm/" class="uri">https://juliasilge.com/blog/evaluating-stm/</a>&nbsp;</p>
+<p>Tillery, D. &amp; Bloomfield, E. F. (2022). Hyperrationality and rhetorical constellations in digital climate change denial: A multi-methodological analysis of the discourse of watts up with that. Technical Communication Quarterly, 13(4), 356-373. <a href="https://doi.org/10.1080/10572252.2021.2019317" class="uri">https://doi.org/10.1080/10572252.2021.2019317</a>&nbsp;</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
